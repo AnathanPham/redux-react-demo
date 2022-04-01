@@ -74,6 +74,8 @@ export default function Order() {
       <hr />
       <h2> order list with memo</h2>
       <OrderListWithMemo></OrderListWithMemo>
+      <hr></hr>
+      证明：任何state变化都会导致所有订阅回调的执行
     </div>
   );
 }
