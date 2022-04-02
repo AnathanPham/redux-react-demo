@@ -22,7 +22,16 @@ export default function Order() {
     const performanceTestFlagFn = function performanceTestFlagFn(blockTime=10){
       const performanceTestStart = Date.now();
       // 阻塞
-      while (Date.now()<performanceTestStart+blockTime) {}
+      while (Date.now()<performanceTestStart+blockTime) {
+        // 兼容 codesandbox RangeError
+        function fibonacci(n) {
+          if (n == 1 || n == 2) {
+              return 1
+            };
+            return fibonacci(n - 2) + fibonacci(n - 1);
+        }
+        fibonacci(30)
+      }
     }
     performanceTestFlagFn()
     // 900次调用 useSelector
