@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { myConsole } from "./static";
 
 export const orderSlice = createSlice({
   name: "order",
@@ -33,12 +34,15 @@ export const { setOrder, setTime, setColor, changeOrderById } =
   orderSlice.actions;
 
 export const selectCount = (state) => {
+  myConsole.selector("selectCount");
   return state.order.order.length;
 };
 export const selectOrderList = (state) => {
+  myConsole.selector("selectOrderList");
   return state.order.order;
 };
 export const selectColor = (state) => {
+  myConsole.selector("selectColor");
   return state.order.color;
 };
 

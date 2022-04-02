@@ -4,7 +4,10 @@ export const OrderStatusMap = {
 };
 
 export const myConsole = {
-  render:(text)=>{
+  component:(text)=>{
     console.log(`%c ${text} render`,'color:#067413;')
-  }
+  },
+  selector:(text)=>{
+    console.log(`%c ${text} - selector run`,'color:#5707cf;')
+  },
 }

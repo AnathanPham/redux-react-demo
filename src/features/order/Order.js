@@ -13,7 +13,7 @@ import { myConsole } from "./static";
 const OrderListWithMemo = React.memo(OrderList);
 
 export default function Order() {
-  myConsole.render("order");
+  myConsole.component("order");
   const count = useSelector(selectCount);
   const color = useSelector(selectColor);
 

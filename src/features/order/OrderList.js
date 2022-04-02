@@ -4,7 +4,7 @@ import { selectOrderList, changeOrderById } from "./orderSlice";
 import { OrderStatusMap ,myConsole} from "./static";
 
 export default function OrderList() {
-  myConsole.render('OrderList')
+  myConsole.component('OrderList')
   const orderList = useSelector(selectOrderList);
   const dispatch = useDispatch();
 
