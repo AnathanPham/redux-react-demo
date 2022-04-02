@@ -47,7 +47,6 @@ export default function Order() {
     dispatch(setColor(color));
   });
 
-  console.log("order render");
   return (
     <div style={{ color: color || "#000" }}>
       <h1>Order</h1>

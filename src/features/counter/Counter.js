@@ -13,7 +13,6 @@ export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");
-  console.log("Counter render");
 
   return (
     <div>

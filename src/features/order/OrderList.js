@@ -1,12 +1,13 @@
 import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectOrderList, changeOrderById } from "./orderSlice";
-import { OrderStatusMap } from "./static";
+import { OrderStatusMap ,myConsole} from "./static";
 
 export default function OrderList() {
+  myConsole.render('OrderList')
   const orderList = useSelector(selectOrderList);
   const dispatch = useDispatch();
-  console.log("OrderList render");
+
   const handleToggleOrder = useCallback((event) => {
     const id = event.currentTarget.dataset.id;
     const targetOrder = orderList.find((order) => {

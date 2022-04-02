@@ -8,10 +8,12 @@ import {
   setTime,
   setColor,
 } from "./orderSlice";
+import { myConsole } from "./static";
 
 const OrderListWithMemo = React.memo(OrderList);
 
 export default function Order() {
+  myConsole.render("order");
   const count = useSelector(selectCount);
   const color = useSelector(selectColor);
 
@@ -47,7 +49,7 @@ export default function Order() {
     dispatch(setColor(color));
   });
 
-  console.log("order render");
+
   return (
     <div style={{ color: color || "#000" }}>
       <h1>Order</h1>
