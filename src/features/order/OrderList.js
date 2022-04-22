@@ -5,6 +5,7 @@ import { OrderStatusMap ,myConsole} from "./static";
 
 export default function OrderList() {
   myConsole.component('OrderList')
+  // 该组件依赖 orderList
   const orderList = useSelector(selectOrderList);
   const dispatch = useDispatch();
 
